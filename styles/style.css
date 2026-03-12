@@ -369,7 +369,7 @@ nav {
 }
 
 .section-full {
-  padding: 5rem 2rem;
+  padding: 5rem 0rem;
 }
 
 .bg-cream {
@@ -1065,4 +1065,5 @@ footer {
 
 @media (max-width: 430px) {
   .product-grid { grid-template-columns: 1fr; }
+
 }
