@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPIISTAA – Premium Dry Fruits, Spices & Handmade Chocolates</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <!-- Replace with your own logo image in assets/images/logo/ -->
+    <img src="assets/images/logo/happiistaa-logo.jpg" alt="HAPPIISTAA Logo" onerror="this.src='https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=400&q=80'">
+    <div class="nav-logo-text">
+      <span class="brand-name">HAPPI𝖎STAA</span>
+      <span class="brand-sub">Dry Fruits & Spices</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#dryfruits">Dry Fruits</a></li>
+    <li><a href="#spices">Spices</a></li>
+    <li><a href="#chocolates">Chocolates</a></li>
+    <li><a href="#hampers">Gift Hampers</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#location">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#dryfruits" onclick="closeMenu()">Dry Fruits</a></li>
+    <li><a href="#spices" onclick="closeMenu()">Spices</a></li>
+    <li><a href="#chocolates" onclick="closeMenu()">Chocolates</a></li>
+    <li><a href="#hampers" onclick="closeMenu()">Gift Hampers</a></li>
+    <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+    <li><a href="#location" onclick="closeMenu()">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- HERO SECTION -->
+<section id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="badge">🌿 Premium Quality Since Day One</div>
+      <h1>Nature's Finest<span>Dry Fruits, Spices &</span>Handmade Chocolates</h1>
+      <p class="tagline">Healthy &nbsp;•&nbsp; Fresh &nbsp;•&nbsp; Premium Quality</p>
+      <p class="hero-quote" id="heroQuote">"Healthy snacks start with premium dry fruits."</p>
+      <div class="hero-btns">
+        <a href="#dryfruits" class="btn-primary">🥜 Shop Dry Fruits</a>
+        <a href="#spices" class="btn-outline">🌶️ Explore Spices</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-logo-showcase">
+        <div class="ring-outer"></div>
+        <div class="ring-mid"></div>
+        <!-- Replace with your own hero logo image in assets/images/logo/ -->
+        <img class="hero-logo-img" src="assets/images/logo/happiistaa-hero.jpg" alt="HAPPIISTAA" onerror="this.src='https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=400&q=80'">
+      </div>
+    </div>
+  </div>
+  <div class="hero-highlights">
+    <div class="highlight-card fade-up">
+      <div class="icon">⭐</div>
+      <h3>Premium Quality Products</h3>
+      <p>Carefully sourced from the best farms and suppliers worldwide.</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="icon">📦</div>
+      <h3>Fresh & Hygienic Packaging</h3>
+      <p>Sealed for freshness to preserve nutrients and natural aroma.</p>
+    </div>
+    <div class="highlight-card fade-up">
+      <div class="icon">💰</div>
+      <h3>Affordable Market Prices</h3>
+      <p>Best quality at fair prices — no compromise, no hidden cost.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DRY FRUITS SECTION -->
+<section id="dryfruits" class="section-full bg-cream">
+  <div class="section" style="padding: 0 2rem;">
+    <div class="section-title fade-up">
+      <span class="pre-title">Handpicked Selection</span>
+      <h2>Premium Dry Fruits & Nuts</h2>
+      <div class="gold-divider"><div class="diamond"></div></div>
+      <p>Sourced from the finest farms — packed with nutrition, taste, and natural goodness.</p>
+    </div>
+    <div class="product-grid" id="dryfruits-grid">
+      <!-- Product cards will be injected by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- SPICES SECTION -->
+<section id="spices" class="section-full bg-cream">
+  <div class="section" style="padding: 0 2rem;">
+    <div class="section-title fade-up">
+      <span class="pre-title">Authentic Flavours</span>
+      <h2>Pure & Aromatic Spices</h2>
+      <div class="gold-divider"><div class="diamond"></div></div>
+      <p>Bring authentic Indian flavours to your kitchen with our hand-selected spices.</p>
+    </div>
+    <div class="product-grid spice-grid" id="spices-grid"></div>
+  </div>
+</section>
+
+<!-- CHOCOLATES SECTION -->
+<section id="chocolates" class="section-full bg-maroon">
+  <div class="section" style="padding: 0 2rem;">
+    <div class="section-title fade-up">
+      <span class="pre-title" style="color: var(--gold-light);">Crafted with Love</span>
+      <h2 style="color: var(--white);">Handmade <span style="color:var(--gold)">Chocolates</span></h2>
+      <div class="gold-divider"><div class="diamond"></div></div>
+      <p style="color: rgba(255,255,255,0.6);">Indulge in artisan chocolates crafted with premium dry fruits and finest cocoa.</p>
+    </div>
+    <div class="product-grid choc-products-grid" id="chocolates-grid"></div>
+  </div>
+</section>
+
+<!-- GIFT HAMPERS -->
+<section id="hampers" class="section">
+  <div class="section-title fade-up">
+    <span class="pre-title">Celebrate in Style</span>
+    <h2>Premium Gift Hampers</h2>
+    <div class="gold-divider"><div class="diamond"></div></div>
+    <p>Perfect for festivals, celebrations & corporate gifting — curated with care.</p>
+  </div>
+  <div class="hamper-grid">
+    <div class="hamper-card fade-up">
+      <div class="hamper-icon">🎁</div>
+      <h3>Healthy Treat Box</h3>
+      <p class="includes">Almonds, Cashews, Pistachios & more</p>
+      <div class="hamper-price">₹1,200 <span>approx.</span></div>
+      <a class="wa-btn" href="https://wa.me/917353921921?text=Hello+Happiistaa,+I+would+like+to+order+the+Healthy+Treat+Box+Gift+Hamper." target="_blank">📱 Order on WhatsApp</a>
+    </div>
+    <div class="hamper-card fade-up">
+      <div class="hamper-icon">🪔</div>
+      <h3>Festival Premium Box</h3>
+      <p class="includes">Assorted dry fruits and handmade chocolates</p>
+      <div class="hamper-price">₹1,800 <span>approx.</span></div>
+      <a class="wa-btn" href="https://wa.me/917353921921?text=Hello+Happiistaa,+I+would+like+to+order+the+Festival+Premium+Box." target="_blank">📱 Order on WhatsApp</a>
+    </div>
+    <div class="hamper-card fade-up">
+      <div class="hamper-icon">👑</div>
+      <h3>Royal Celebration Hamper</h3>
+      <p class="includes">Luxury dry fruits selection — Mamra, Hazelnuts, Anjeer</p>
+      <div class="hamper-price">₹2,500 <span>approx.</span></div>
+      <a class="wa-btn" href="https://wa.me/917353921921?text=Hello+Happiistaa,+I+would+like+to+order+the+Royal+Celebration+Hamper." target="_blank">📱 Order on WhatsApp</a>
+    </div>
+    <div class="hamper-card fade-up">
+      <div class="hamper-icon">🏢</div>
+      <h3>Corporate Gift Box</h3>
+      <p class="includes">Premium assorted hamper for bulk corporate orders</p>
+      <div class="hamper-price">₹3,000 <span>approx.</span></div>
+      <a class="wa-btn" href="https://wa.me/917353921921?text=Hello+Happiistaa,+I+would+like+to+enquire+about+the+Corporate+Gift+Box." target="_blank">📱 Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section-full bg-maroon">
+  <div class="section" style="padding: 0 2rem;">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <span style="display:inline-block;color:var(--gold);font-size:0.75rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:0.75rem;">Our Story</span>
+        <h2>Welcome to <span>HAPPI𝖎STAA</span></h2>
+        <p>HAPPIISTAA brings premium dry fruits, authentic spices, and handmade chocolates to your home. We carefully select our products to ensure freshness, purity, and taste in every bite.</p>
+        <p>Founded with a passion for quality and a love for natural goodness, every product at HAPPIISTAA is chosen with care — from the farms of the world's finest growing regions to your table.</p>
+        <p>We believe that good food makes happy people. That's the philosophy behind our name, and the heart behind every product we offer.</p>
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="num">50+</span>
+            <span class="label">Products</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">100%</span>
+            <span class="label">Pure</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">★ 5</span>
+            <span class="label">Quality</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-logo-wrap fade-up">
+        <!-- Replace with your own store image in assets/images/logo/ -->
+        <img src="assets/images/logo/happiistaa-store.jpeg" alt="HAPPIISTAA Store" onerror="this.src='https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=400&q=80'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION SECTION -->
+<section id="location" class="section">
+  <div class="section-title fade-up">
+    <span class="pre-title">Find Us</span>
+    <h2>Store Location</h2>
+    <div class="gold-divider"><div class="diamond"></div></div>
+    <p>Visit us at our store in Navanagar, Hubballi for the freshest selection.</p>
+  </div>
+  <div class="location-grid">
+    <div class="contact-card fade-up">
+      <h3>Get In Touch</h3>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="info">
+          <strong>Address</strong>
+          <p>Shop No. EWS 79, 5th Cross<br>Navanagar, Hubballi – 580025<br>Karnataka, India</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="info">
+          <strong>Phone / WhatsApp</strong>
+          <p><a href="tel:+917353921921">+91 7353 921 921</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="info">
+          <strong>Email</strong>
+          <p><a href="mailto:happiistaa@gmail.com">happiistaa@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div class="info">
+          <strong>Store Hours</strong>
+          <p>Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <a href="https://wa.me/917353921921?text=Hello+Happiistaa,+I+would+like+to+order+from+your+catalogue." target="_blank" class="btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="map-embed fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3849.264023827484!2d75.12300!3d15.37650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d0a1ef4e8e53%3A0x2c7e6a7e19bca1b3!2sNavanagar%2C+Hubli%2C+Karnataka+580025!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY POLICY -->
+<section id="privacy" class="section-full bg-cream">
+  <div class="section" style="padding: 0 2rem;">
+    <div class="section-title fade-up">
+      <span class="pre-title">Your Trust Matters</span>
+      <h2>Privacy Policy</h2>
+      <div class="gold-divider"><div class="diamond"></div></div>
+    </div>
+    <div class="privacy-card fade-up">
+      <h3>Information We Collect</h3>
+      <p>When you contact us through WhatsApp, email, or phone, we may collect your name, contact details, and order preferences solely to process your request and provide better service.</p>
+      <h3>How We Use Your Information</h3>
+      <p>Your information is used exclusively to process orders, respond to inquiries, and improve our services. We do not sell, rent, or share your personal data with any third party under any circumstances.</p>
+      <h3>Data Security</h3>
+      <p>We are committed to keeping your personal information safe and secure. All customer data is handled with strict confidentiality and is protected from unauthorized access or disclosure.</p>
+      <h3>WhatsApp & Communication</h3>
+      <p>When you message us on WhatsApp, your number is only used to respond to your inquiry and process your order. We do not add you to any marketing lists without your consent.</p>
+      <h3>Cookies & Online Tracking</h3>
+      <p>This website does not use cookies or tracking technologies that collect personal information. We respect your privacy and your browsing remains anonymous.</p>
+      <h3>Contact Us</h3>
+      <p>For any privacy-related concerns, please reach out to us at <a href="mailto:happiistaa@gmail.com" style="color:var(--brown);font-weight:600;">happiistaa@gmail.com</a> or call us at <a href="tel:+917353921921" style="color:var(--brown);font-weight:600;">+91 7353 921 921</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo/happiistaa-logo.jpg" alt="HAPPIISTAA" onerror="this.src='https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=400&q=80'">
+      <span class="brand-name-footer">HAPPI𝖎STAA</span>
+      <p>Premium Dry Fruits, Authentic Spices & Handmade Chocolates — bringing nature's finest to your home.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#dryfruits">Dry Fruits</a></li>
+        <li><a href="#spices">Spices</a></li>
+        <li><a href="#chocolates">Chocolates</a></li>
+        <li><a href="#hampers">Gift Hampers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#location">Store Location</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">
+        <i>📍</i>
+        <span>Shop No. EWS 79, 5th Cross, Navanagar, Hubballi – 580025</span>
+      </div>
+      <div class="footer-contact-item">
+        <i>📞</i>
+        <a href="tel:+917353921921">+91 7353 921 921</a>
+      </div>
+      <div class="footer-contact-item">
+        <i>✉️</i>
+        <a href="mailto:happiistaa@gmail.com">happiistaa@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 <a href="#home">HAPPIISTAA</a>. All rights reserved.</span>
+    <span>Made with ❤️ in Hubballi, Karnataka</span>
+  </div>
+</footer>
+
+<!-- FLOATING SOCIAL BUTTONS (Stacked) -->
+<div class="social-floating">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/happiistaa?igsh=bnhsZTg1dnZ2aHky&utm_source=qr" target="_blank" class="social-btn instagram" title="Follow us on Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/917353921921?text=Hello%20Happiistaa%2C%20I%20would%20like%20to%20order%20from%20your%20catalogue." target="_blank" class="social-btn whatsapp" title="Order on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- Custom JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
