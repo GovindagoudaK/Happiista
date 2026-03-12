@@ -3,7 +3,7 @@
 // Example: assets/images/dryfruits/almonds.jpg
 
 const dryFruits = [
-  { name: "Almonds (Badam)", price: "₹900/kg", desc: "Premium California almonds rich in protein and healthy fats.", img: "assets/images/dryfruits/almonds.webp", badge: "Best Seller" },
+  { name: "Almonds (Badam)", price: "₹900/kg", desc: "Premium California almonds rich in protein and healthy fats.", img: "assets/images/dryfruits/Almonds.webp", badge: "Best Seller" },
 //   { name: "Mamra Almonds", price: "₹1,600/kg", desc: "Rare Mamra variety — lighter, crunchier, naturally rich in oils.", img: "assets/images/dryfruits/mamra-almonds.jpg", badge: "Premium" },
 //   { name: "Cashews W320", price: "₹850/kg", desc: "Whole cashews W320 grade — creamy, buttery and nutritious.", img: "assets/images/dryfruits/cashews-w320.jpg", badge: "Popular" },
   { name: "Cashews W240", price: "₹950/kg", desc: "Larger W240 cashews, perfect for gifting and snacking.", img: "assets/images/dryfruits/cashews-w240.webp", badge: "" },
@@ -111,4 +111,5 @@ function closeMenu() {
 
 // Expose functions globally
 window.toggleMenu = toggleMenu;
+
 window.closeMenu = closeMenu;
